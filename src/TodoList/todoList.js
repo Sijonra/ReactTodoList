@@ -1,12 +1,12 @@
-import react from 'react';
+import React from "react";
+import ListItem from "./ListItem";
 
-
-function todoList(){
+function todoList(props){
     return(
         <ul className="todoList">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {props.todos.map(todo =>{
+                return <ListItem title={todo.value}/>
+            })}
         </ul>
     )
 }
