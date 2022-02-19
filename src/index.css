@@ -9,5 +9,15 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+body{
+  background: rgb(251,63,221);
+  background: linear-gradient(90deg, rgba(251,63,221,1) 0%, rgba(137,68,240,1) 63%, rgba(133,68,241,1) 65%, rgba(111,69,245,1) 77%, rgba(70,70,252,1) 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
 }
