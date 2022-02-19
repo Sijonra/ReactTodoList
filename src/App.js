@@ -9,8 +9,15 @@ function App() {
         {id: 2, isCompleted: false, value: "Купить Гармоху"},
     ];
 
+    const handleChange = (id) =>{
+        todos[id].isCompleted = !todos[id].isCompleted;
+    }
+
     return(
-        <TodoList todo={todos}/>
+        <TodoList
+            todo={todos}
+            handleChange={handleChange}
+        />
     )
 }
 

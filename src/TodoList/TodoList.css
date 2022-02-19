@@ -42,9 +42,10 @@
 .todo-list-delete-button{
     cursor: pointer;
     align-self: flex-end;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: none;
     border-radius: 50%;
     background: #b296b0;
+    font-size: 20px;
 }
