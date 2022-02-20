@@ -3,14 +3,24 @@ import TodoList from './TodoList/TodoList'
 
 function App() {
 
-    let todos = [
-        {id: 0, isCompleted: false, value: "Купить Антоху"},
-        {id: 1, isCompleted: false, value: "Купить Картоху"},
-        {id: 2, isCompleted: false, value: "Купить Гармоху"},
-    ];
+    const [todos, setTodos] = React.useState(
+        [
+            {id: 0, isCompleted: false, value: "Купить Антоху"},
+            {id: 1, isCompleted: false, value: "Купить Картоху"},
+            {id: 2, isCompleted: false, value: "Купить Гармоху"},
+        ]
+    )
 
     const handleChange = (id) =>{
-        todos[id].isCompleted = !todos[id].isCompleted;
+        setTodos(
+            todos.map(element =>{
+                if(element.id === id){
+                    element.isCompleted = !element.isCompleted;
+                }
+                return element;
+            })
+        )
+
     }
 
     return(
@@ -19,6 +29,7 @@ function App() {
             handleChange={handleChange}
         />
     )
+
 }
 
 export default App;

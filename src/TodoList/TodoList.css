@@ -49,3 +49,7 @@
     background: #b296b0;
     font-size: 20px;
 }
+
+.item-completed{
+    text-decoration: line-through;
+}

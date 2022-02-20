@@ -2,7 +2,7 @@ import './TodoList.css';
 import ListItem from "./ListItem";
 
 function todoList(props){
-        console.log(props.todo);
+
     return(
         <div className="todo-list-wrapper">
             <h1 className="todo-list__title">To Do List</h1>
@@ -10,6 +10,7 @@ function todoList(props){
                 {props.todo.map(element =>{
                     return(
                         <ListItem
+                            todo={props.todo}
                             value={element.value}
                             key={element.id}
                             id={element.id}

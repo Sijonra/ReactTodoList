@@ -3,9 +3,15 @@ import './TodoList.css';
 
 function ListItem(props){
 
+    let classes = [];
+
+    if(props.todo[props.id].isCompleted){
+        classes.push('item-completed');
+    }
+
     return(
         <li className="todo__item">
-            <span>
+            <span className={classes.join(' ')}>
                 <input
                     className="list-input"
                     type="checkbox"
